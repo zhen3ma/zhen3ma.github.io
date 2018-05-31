@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>马小川</title>
+  <title>4位加法器的设计 | 马小川</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习总结 思考感悟 知识管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马小川">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Quartus II 与  Modelsim 软件的仿真与实现【以四位加法器为例】  知识背景本文为数字系统设计与Verilog HDL 课程的一个比较小的实验题目。实验目的是设计一个4位加法器。实验利用Quartus II 软件与Modelsim 仿真软件采用Verilog HDL 语言中的数据流级建模方法，对4位加法器进行硬件设计并对其仿真验证。 硬件描述语言（Verilog HDL ）">
+<meta name="keywords" content="FPGA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4位加法器的设计">
+<meta property="og:url" content="http://yoursite.com/2018/05/28/4位加法器的设计/index.html">
 <meta property="og:site_name" content="马小川">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
+<meta property="og:description" content="Quartus II 与  Modelsim 软件的仿真与实现【以四位加法器为例】  知识背景本文为数字系统设计与Verilog HDL 课程的一个比较小的实验题目。实验目的是设计一个4位加法器。实验利用Quartus II 软件与Modelsim 仿真软件采用Verilog HDL 语言中的数据流级建模方法，对4位加法器进行硬件设计并对其仿真验证。 硬件描述语言（Verilog HDL ）">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1ceqnsb51a811vhe1o3d2hisd8a.png-w.jpg">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1ceqqqbk61i2jcq21rvm172j224a.png-w.jpg">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1ceqquau6lof1ca711bbadej6sa.png-w.jpg">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1ceqr33q01pbfdv1prb1vln1foca.png-w.jpg">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1ceqrhk1l13m916nf17310pe10v0a.png-w.jpg">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1ceqs4ld46g9tv4l9fqle1or0a.png-w.jpg">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1ceqt1ptetre1if740c1nfetr3a.png-w.jpg">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1ceqt35gb15vq1vvs25o1vcu1m79a.png-w.jpg">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1ceqt555o1m8pgphiks1avn13h5a.png-w.jpg">
+<meta property="og:updated_time" content="2018-05-31T10:52:37.280Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马小川">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:title" content="4位加法器的设计">
+<meta name="twitter:description" content="Quartus II 与  Modelsim 软件的仿真与实现【以四位加法器为例】  知识背景本文为数字系统设计与Verilog HDL 课程的一个比较小的实验题目。实验目的是设计一个4位加法器。实验利用Quartus II 软件与Modelsim 仿真软件采用Verilog HDL 语言中的数据流级建模方法，对4位加法器进行硬件设计并对其仿真验证。 硬件描述语言（Verilog HDL ）">
+<meta name="twitter:image" content="http://t1.aixinxi.net/o_1ceqnsb51a811vhe1o3d2hisd8a.png-w.jpg">
   
     <link rel="alternative" href="/atom.xml" title="马小川" type="application/atom+xml">
   
@@ -28,9 +40,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -42,8 +51,8 @@
           rootUrl: '/',
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -213,9 +222,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-4位加法器的设计" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-4位加法器的设计" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2018/05/28/4位加法器的设计/" class="article-date">
@@ -231,12 +238,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/28/4位加法器的设计/">4位加法器的设计</a>
+    <h1 class="article-title" itemprop="name">
+      4位加法器的设计
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FPGA/">FPGA</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -280,214 +298,127 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FPGA/">FPGA</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-C-语言100例1-5" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/05/22/C-语言100例1-5/" class="article-date">
-      <time datetime="2018-05-22T10:19:32.000Z" itemprop="datePublished">2018-05-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/22/C-语言100例1-5/">C 语言100例1-5</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-校园网盘产品需求分析" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/05/19/校园网盘产品需求分析/" class="article-date">
-      <time datetime="2018-05-19T01:36:05.000Z" itemprop="datePublished">2018-05-19</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/19/校园网盘产品需求分析/">校园网盘产品调研与需求分析方案</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p><del>这是一篇用来凑数的比较稚嫩的方案设计 本文主要是用来学习一下makdown排版</del></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>随着现如今计算机及智能移动终端设备的应用普及和发展， 高校师生在教学、科研、办公及日常学习生活中会产生大量数据，如教学课件、多媒体素材、办公文档和实验数据等等。对于这些数据的存储、备份和共享比较传统的方式包括 U盘、移动硬盘、邮箱、FTP等，U 盘和移动硬盘存在硬件故障及病毒感染的隐患；而邮箱和 FTP 等共享手段在使用的便捷程度以及跨平台方面具有局限性。因此，校园网内数据可靠存储和快速无缝共享成为高校信息化建设亟需解决的问题。<br>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/方案设计/">方案设计</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/05/19/校园网盘产品需求分析/#more">戳一下 >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/05/28/4位加法器的设计/">4位加法器的设计</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 zhen3ma 的个人博客">zhen3ma</a></p>
+        <p><span>发布时间:</span>2018年05月28日 - 21时17分</p>
+        <p><span>最后更新:</span>2018年05月31日 - 18时52分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/05/28/4位加法器的设计/" title="4位加法器的设计">http://yoursite.com/2018/05/28/4位加法器的设计/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/05/28/4位加法器的设计/　　作者: zhen3ma" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-碎碎念" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/04/01/碎碎念/" class="article-date">
-      <time datetime="2018-03-31T16:00:00.000Z" itemprop="datePublished">2018-04-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/01/碎碎念/">碎碎念</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="听说"><a href="#听说" class="headerlink" title="听说"></a>听说</h2><p>听说大牛都有博客<br>我也不知道为什么就弄了个</p>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/04/01/碎碎念/#more">戳一下 >></a>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/22/C-语言100例1-5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C 语言100例1-5</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Quartus-II-与-Modelsim-软件的仿真与实现"><span class="toc-number">1.</span> <span class="toc-text">Quartus II 与  Modelsim 软件的仿真与实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#知识背景"><span class="toc-number">2.</span> <span class="toc-text">知识背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原理图设计输入"><span class="toc-number">3.</span> <span class="toc-text">原理图设计输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modelsim仿真"><span class="toc-number">4.</span> <span class="toc-text">Modelsim仿真</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
 
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
-  
-  
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/05/22/C-语言100例1-5/" title="下一篇: C 语言100例1-5">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/05/28/4位加法器的设计/">4位加法器的设计</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/22/C-语言100例1-5/">C 语言100例1-5</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/19/校园网盘产品需求分析/">校园网盘产品调研与需求分析方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/01/碎碎念/">碎碎念</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
