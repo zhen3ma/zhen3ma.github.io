@@ -242,40 +242,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
+              <blockquote>
 <h3 id="Quartus-II-与-Modelsim-软件的仿真与实现"><a href="#Quartus-II-与-Modelsim-软件的仿真与实现" class="headerlink" title="Quartus II 与  Modelsim 软件的仿真与实现"></a>Quartus II 与  Modelsim 软件的仿真与实现</h3><p>【以四位加法器为例】</p>
 </blockquote>
-<h3 id="知识背景"><a href="#知识背景" class="headerlink" title="知识背景"></a>知识背景</h3><p>本文为数字系统设计与Verilog HDL 课程的一个比较小的实验题目。实验目的是设计一个4位加法器。实验利用Quartus II 软件与Modelsim 仿真软件采用Verilog HDL 语言中的数据流级建模方法，对4位加法器进行硬件设计并对其仿真验证。</p>
-<p><strong>硬件描述语言（Verilog HDL ）</strong></p>
-<blockquote>
-<p>Verilog HDL是一种硬件描述语言（HDL:Hardware Description Language），以文本形式来描述数字系统硬件的结构和行为的语言，用它可以表示逻辑电路图、逻辑表达式，还可以表示数字逻辑系统所完成的逻辑功能。 Verilog HDL和VHDL是世界上最流行的两种硬件描述语言，都是在20世纪80年代中期开发出来的。前者由Gateway Design Automation公司（该公司于1989年被Cadence公司收购）开发。两种HDL均为IEEE标准。 </p>
-</blockquote>
-<p><strong>4位加法器</strong></p>
-<blockquote>
-<p>加法器是数字系统中的基本逻辑器件。是一个能实现四位二进制数全加的数字电路模块。<br>四位全加器可对两个多位二进制数进行加法运算，同时产生进位。当两个二进制数相加时，较高位相加时必须加入较低位的进位项（Ci），以得到输出为和（S）和进位（C0）</p>
-</blockquote>
-<p><strong>Quartus II 与  Modelsim 软件</strong><br> 简单来说前者是用来搭建原理图，后者是用来仿真查看实现的结果的两款软件。</p>
-<blockquote>
-<p>由于实验室设施条件不足，本实验使用较为传统的Quartus II 为例<br> 与新版Quartus prime操作 有一定的差异</p>
-</blockquote>
-<p><a href="https://www.altera.com.cn/downloads/download-center.html" target="_blank" rel="noopener">Quartus官方网站软件下载地址</a><br><a href="https://www.altera.com.cn/products/design-software/model---simulation/modelsim-altera-software.html" target="_blank" rel="noopener">Modelsim软件下载地址</a></p>
-<h3 id="原理图设计输入"><a href="#原理图设计输入" class="headerlink" title="原理图设计输入"></a>原理图设计输入</h3><ol>
-<li><p>输入源文件<br>首先在安装好Quartus II 软件之后，创建新文件，建立原理图模块。编译运行并保存在某个空文件夹中。<br><img src="http://t1.aixinxi.net/o_1ceqnsb51a811vhe1o3d2hisd8a.png-w.jpg" alt="输入源文件"></p>
-</li>
-<li><p>创建项目工程文件<br>在编译运行无误后，系统会提示是否创建项目工程文件，这里选择是，然后按照流程进行工程名、目标器件、选用的综合器和仿真器等进行设计。这里值得注意的是：仿真器需要选用第三方EDA Modelsim仿真软件。<br><img src="http://t1.aixinxi.net/o_1ceqqqbk61i2jcq21rvm172j224a.png-w.jpg" alt="需要注意的地方1"><br><img src="http://t1.aixinxi.net/o_1ceqquau6lof1ca711bbadej6sa.png-w.jpg" alt="需要注意的地方2"><br>其余的地方默认直接下一步即可，点击finish并保存之后。这样我们就建立了一个工程文件</p>
-</li>
-<li>生成测试文件（.vt）<br><img src="http://t1.aixinxi.net/o_1ceqr33q01pbfdv1prb1vln1foca.png-w.jpg" alt="生成测试文件"></li>
-</ol>
-<p>到这里我们就完成了Quartus 软件的设计，接下来要利用Modelsim 进行仿真验证，在验证之前，我们首先要了解一下在Modelsim软件中需要用到的文件。<br><img src="http://t1.aixinxi.net/o_1ceqrhk1l13m916nf17310pe10v0a.png-w.jpg" alt=""><br>vo文件是Verilog程序生成的文件，需要进行对其编译。vt文件为仿真测试文件，在上述操作步骤中已经生成。这里需要对代码进行改写。</p>
-<h3 id="Modelsim仿真"><a href="#Modelsim仿真" class="headerlink" title="Modelsim仿真"></a>Modelsim仿真</h3><ol>
-<li><p>导入源文件<br>导入需要仿真验证的两个软件<br><img src="http://t1.aixinxi.net/o_1ceqs4ld46g9tv4l9fqle1or0a.png-w.jpg" alt="导入源文件"></p>
-</li>
-<li><p>编译代码<br><img src="http://t1.aixinxi.net/o_1ceqt1ptetre1if740c1nfetr3a.png-w.jpg" alt="编译代码"><br><img src="http://t1.aixinxi.net/o_1ceqt35gb15vq1vvs25o1vcu1m79a.png-w.jpg" alt="编译代码２"></p>
-</li>
-<li><p>生成仿真波形<br><img src="http://t1.aixinxi.net/o_1ceqt555o1m8pgphiks1avn13h5a.png-w.jpg" alt="生成仿真波形"></p>
-</li>
-</ol>
-
+          
       
       
     </div>
@@ -289,6 +259,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FPGA/">FPGA</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/2018/05/28/4位加法器的设计/#more">戳一下 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

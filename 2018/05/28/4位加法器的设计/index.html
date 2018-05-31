@@ -5,13 +5,13 @@
   
   <title>4位加法器的设计 | 马小川</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Quartus II 与  Modelsim 软件的仿真与实现【以四位加法器为例】  知识背景本文为数字系统设计与Verilog HDL 课程的一个比较小的实验题目。实验目的是设计一个4位加法器。实验利用Quartus II 软件与Modelsim 仿真软件采用Verilog HDL 语言中的数据流级建模方法，对4位加法器进行硬件设计并对其仿真验证。 硬件描述语言（Verilog HDL ）">
+  <meta name="description" content="Quartus II 与  Modelsim 软件的仿真与实现【以四位加法器为例】">
 <meta name="keywords" content="FPGA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4位加法器的设计">
 <meta property="og:url" content="http://yoursite.com/2018/05/28/4位加法器的设计/index.html">
 <meta property="og:site_name" content="马小川">
-<meta property="og:description" content="Quartus II 与  Modelsim 软件的仿真与实现【以四位加法器为例】  知识背景本文为数字系统设计与Verilog HDL 课程的一个比较小的实验题目。实验目的是设计一个4位加法器。实验利用Quartus II 软件与Modelsim 仿真软件采用Verilog HDL 语言中的数据流级建模方法，对4位加法器进行硬件设计并对其仿真验证。 硬件描述语言（Verilog HDL ）">
+<meta property="og:description" content="Quartus II 与  Modelsim 软件的仿真与实现【以四位加法器为例】">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://t1.aixinxi.net/o_1ceqnsb51a811vhe1o3d2hisd8a.png-w.jpg">
 <meta property="og:image" content="http://t1.aixinxi.net/o_1ceqqqbk61i2jcq21rvm172j224a.png-w.jpg">
@@ -22,10 +22,10 @@
 <meta property="og:image" content="http://t1.aixinxi.net/o_1ceqt1ptetre1if740c1nfetr3a.png-w.jpg">
 <meta property="og:image" content="http://t1.aixinxi.net/o_1ceqt35gb15vq1vvs25o1vcu1m79a.png-w.jpg">
 <meta property="og:image" content="http://t1.aixinxi.net/o_1ceqt555o1m8pgphiks1avn13h5a.png-w.jpg">
-<meta property="og:updated_time" content="2018-05-31T10:52:37.280Z">
+<meta property="og:updated_time" content="2018-05-31T11:02:28.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4位加法器的设计">
-<meta name="twitter:description" content="Quartus II 与  Modelsim 软件的仿真与实现【以四位加法器为例】  知识背景本文为数字系统设计与Verilog HDL 课程的一个比较小的实验题目。实验目的是设计一个4位加法器。实验利用Quartus II 软件与Modelsim 仿真软件采用Verilog HDL 语言中的数据流级建模方法，对4位加法器进行硬件设计并对其仿真验证。 硬件描述语言（Verilog HDL ）">
+<meta name="twitter:description" content="Quartus II 与  Modelsim 软件的仿真与实现【以四位加法器为例】">
 <meta name="twitter:image" content="http://t1.aixinxi.net/o_1ceqnsb51a811vhe1o3d2hisd8a.png-w.jpg">
   
     <link rel="alternative" href="/atom.xml" title="马小川" type="application/atom+xml">
@@ -263,6 +263,7 @@
         <blockquote>
 <h3 id="Quartus-II-与-Modelsim-软件的仿真与实现"><a href="#Quartus-II-与-Modelsim-软件的仿真与实现" class="headerlink" title="Quartus II 与  Modelsim 软件的仿真与实现"></a>Quartus II 与  Modelsim 软件的仿真与实现</h3><p>【以四位加法器为例】</p>
 </blockquote>
+<a id="more"></a>
 <h3 id="知识背景"><a href="#知识背景" class="headerlink" title="知识背景"></a>知识背景</h3><p>本文为数字系统设计与Verilog HDL 课程的一个比较小的实验题目。实验目的是设计一个4位加法器。实验利用Quartus II 软件与Modelsim 仿真软件采用Verilog HDL 语言中的数据流级建模方法，对4位加法器进行硬件设计并对其仿真验证。</p>
 <p><strong>硬件描述语言（Verilog HDL ）</strong></p>
 <blockquote>
@@ -293,6 +294,10 @@
 <li><p>生成仿真波形<br><img src="http://t1.aixinxi.net/o_1ceqt555o1m8pgphiks1avn13h5a.png-w.jpg" alt="生成仿真波形"></p>
 </li>
 </ol>
+<p>Modelsim 最重要的就是对于Verilog程序的编译和调试，由于篇幅限制这里不做过多的赘述。本文的主要目的是用来熟悉仿真环境的搭建</p>
+<blockquote>
+<p>其他参考链接<br><a href="http://www.51hei.com/bbs/dpj-44519-1.html" target="_blank" rel="noopener">如何在Quartus II 中调用Modelsim SE进行仿真调试</a></p>
+</blockquote>
 
       
       
@@ -305,7 +310,7 @@
         <p><span>本文标题:</span><a href="/2018/05/28/4位加法器的设计/">4位加法器的设计</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 zhen3ma 的个人博客">zhen3ma</a></p>
         <p><span>发布时间:</span>2018年05月28日 - 21时17分</p>
-        <p><span>最后更新:</span>2018年05月31日 - 18时52分</p>
+        <p><span>最后更新:</span>2018年05月31日 - 19时02分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/05/28/4位加法器的设计/" title="4位加法器的设计">http://yoursite.com/2018/05/28/4位加法器的设计/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/05/28/4位加法器的设计/　　作者: zhen3ma" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
