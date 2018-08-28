@@ -7,7 +7,7 @@
 
     
 
-    <title>归档：2018/8 | blog of zhen3ma</title>
+    <title>web前端学习笔记之html（一） | blog of zhen3ma</title>
     <meta name="author" content="zhen3ma">
     
     <meta name="description" content="学习总结 思考感悟 知识管理">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="web前端学习笔记之html（一）"/>
     <meta property="og:site_name" content="马小川"/>
 
     
@@ -201,46 +201,109 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper light-blue lighten-3">
-        <span class="breadcrumb">当前位置（标签）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/学习笔记/">学习笔记</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>web前端学习笔记之html（一）</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="pink-link-context" datetime="2018-05-01T02:48:18.000Z"><a href="/2018/05/01/web前端学习笔记之html/">2018-05-01</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/前端/" class="chip pink lighten-1">前端</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2018
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2018/08/27/web应用安全学习笔记/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-08-27T13:12:56.000Z">2018-08-27</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                web应用安全学习笔记（一）
-                            </a>
-                        
-                            <a href="/2018/08/05/不定期更新的碎碎念/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-08-05T09:30:25.000Z">2018-08-05</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                不定期更新的碎碎念（二）
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
-        
-    </ul>
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#从http协议开始说起"><span class="section table-of-contents-text">从http协议开始说起</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#HTML简述"><span class="section table-of-contents-text">ＨＴＭＬ简述</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#html骨架和基本语法"><span class="section table-of-contents-text">html骨架和基本语法</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#推荐编程软件和快速生成骨架"><span class="section table-of-contents-text">推荐编程软件和快速生成骨架</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <blockquote>
+<p>前段时间在自己比较空闲的时候 有幸接触到了一些资源网站<br>抽了点时间了解了一下web前端<br>在此记录一下自己的学习过程和自己的学习心得</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="从http协议开始说起"><a href="#从http协议开始说起" class="headerlink" title="从http协议开始说起"></a>从http协议开始说起</h3><p>说起http，相信每一位小伙伴都会比较熟悉这个名词。那你有没有想过，它到底是什么呢？</p>
+<p>上网就是向服务器请求数据，向哪个服务器呢发出请求呢？在我们上网时，我们经常会在浏览器的搜索框上输入你要搜索的网址， 这个网址可以通俗的理解为我们你要访问服务器的地址。<br><a href="http://" target="_blank" rel="noopener"></a><br>服务器是怎么知道你要请求什么数据的呢？又或者说你们之间是通过什么来协商你请求网页数据的呢？这就用到了协议的概念。我们知道当你打开一个网页上，上面有着各种文字图片以及超链接等，我们把这些数据叫做<em>超文本</em>，用来在计算机和服务器之间进行传输文本的协议就是<strong>http协议</strong>。</p>
+<p>计算机是用二进制进行传输数据的，对于图片，文字，超链接这些复杂的东西，计算机是如何表示的呢？由此就引出了==超文本标记语言ＨＴＭＬ==</p>
+<p>   <img src="https://s1.ax1x.com/2018/08/28/PL5heH.jpg" alt="PL5heH.jpg"></p>
+<h3 id="HTML简述"><a href="#HTML简述" class="headerlink" title="ＨＴＭＬ简述"></a>ＨＴＭＬ简述</h3><p>ＨＴＭＬ是英语Hyper Text Markup Language的缩写，超文本标记语言</p>
+<p>.html 就是网页的格式</p>
+<p>html中，负责描述页面的语义，<strong>除了语义什么都没有</strong></p>
+<h4 id="html骨架和基本语法"><a href="#html骨架和基本语法" class="headerlink" title="html骨架和基本语法"></a>html骨架和基本语法</h4><p>HTML是有标签对儿构成的，标签对儿由起始标签<code>&lt;h&gt;</code>和结束标签组成<code>&lt;/h&gt;</code></p>
+<pre><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meｔa http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;
+        &lt;title&gt;显然这是一个标题&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;我是一个段落标签呀&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>第一行：网页的生命头，术语叫做ＤＴＤ。常规不解释<br>第二行，ｈｔｍｌ最大标签。ｘｍｌｎｓ命名空间。<br>第四行：＜ｈｅａｄ＞标签，用来配置。<br>第五行：字符集配置<br>＜ｔｉｔｌｅ＞网页的标题　＜ｂｏｄｙ＞标签内就是网页的内容。</p>
+<h4 id="推荐编程软件和快速生成骨架"><a href="#推荐编程软件和快速生成骨架" class="headerlink" title="推荐编程软件和快速生成骨架"></a>推荐编程软件和快速生成骨架</h4><p><strong>编程软件的选择</strong></p>
+<p>在了解了ｈｔｍｌ的基本骨架和语法结构之后，这里推荐一个个人觉得用起来比较舒服的写代码的软件sublime<a href="https://www.sublimetext.com/" target="_blank" rel="noopener">官网链接</a>。</p>
+<p>在下载完成后，我们需要安装一些前端必备的插件，当然这些插件有利也有弊，对于新手来说这个会让你变得越来越懒，建议在熟悉标签之后达到一定的水准再使用这些便捷的插件。<br>具体的安装插件的方法可以参考<a href="https://blog.csdn.net/leo_01169/article/details/79945722" target="_blank" rel="noopener">sublime Text3的常用插件的安装及使用</a><br><strong>快速生成骨架</strong><br>在安装好插件之后，打开sublime。新建html文档，保存。<br>输入html：xt,然后tab一下，马上补全。<br><img src="https://s1.ax1x.com/2018/08/28/PL5RyD.png" alt="PL5RyD.png"><br><img src="https://s1.ax1x.com/2018/08/28/PL52QO.png" alt="PL52QO.png"><br>更多功能，尽请下载体验</p>
+<p>本篇文章作为前端入门基础 简单的介绍了一下前端的一些基础概念和sublime软件的安装与使用。后续内容将着重于html的各种标签。<br>以上<br><img src="https://s1.ax1x.com/2018/08/28/PL5WOe.jpg" alt="PL5WOe.jpg"></p>
+
+                
+<p class="pink-link-context">
+    <a href="/2018/05/19/校园网盘产品需求分析/" rel="next" title="校园网盘产品调研与需求分析方案">
+    上一篇：校园网盘产品调研与需求分析方案
+  </a>
+</p>
+
+
+
+<p class="pink-link-context">
+    <a href="/2018/04/27/微信作品/" rel="next" title="微信作品集锦">
+    下一篇：微信作品集锦
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
