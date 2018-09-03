@@ -7,7 +7,7 @@
 
     
 
-    <title>归档：2018 | blog of zhen3ma</title>
+    <title>C语言实现复数加减运算 | blog of zhen3ma</title>
     <meta name="author" content="zhen3ma">
     
     <meta name="description" content="学习总结 思考感悟 知识管理">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="C语言实现复数加减运算"/>
     <meta property="og:site_name" content="马小川"/>
 
     
@@ -201,82 +201,77 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper light-blue lighten-3">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/学习笔记/">学习笔记</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>C语言实现复数加减运算</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="pink-link-context" datetime="2018-09-03T12:21:27.000Z"><a href="/2018/09/03/C语言实现复数加减运算/">2018-09-03</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/C语言/" class="chip pink lighten-1">C语言</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2018
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2018/09/03/C语言实现复数加减运算/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-09-03T12:21:27.000Z">2018-09-03</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                C语言实现复数加减运算
-                            </a>
-                        
-                            <a href="/2018/08/27/web应用安全学习笔记/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-08-27T13:12:56.000Z">2018-08-27</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                web应用安全学习笔记（一）
-                            </a>
-                        
-                            <a href="/2018/08/05/不定期更新的碎碎念/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-08-05T09:30:25.000Z">2018-08-05</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                不定期更新的碎碎念（二）
-                            </a>
-                        
-                            <a href="/2018/05/28/4位加法器的设计/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-05-28T13:17:16.000Z">2018-05-28</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                4位加法器的设计
-                            </a>
-                        
-                            <a href="/2018/05/19/校园网盘产品需求分析/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-05-19T01:36:05.000Z">2018-05-19</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                校园网盘产品调研与需求分析方案
-                            </a>
-                        
-                            <a href="/2018/05/01/web前端学习笔记之html/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-05-01T02:48:18.000Z">2018-05-01</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                web前端学习笔记之html（一）
-                            </a>
-                        
-                            <a href="/2018/04/27/微信作品/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-04-27T13:12:56.000Z">2018-04-27</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                微信作品集锦
-                            </a>
-                        
-                            <a href="/2018/04/01/碎碎念/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-03-31T16:00:00.000Z">2018-04-01</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                不定期更新的碎碎念（一）
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
-        
-    </ul>
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>如何利用C语言来实现复数的加减运算<br>作为数据结构的第一次作业<br>这里用到了简单的定义函数和调用函数的基本操作<br><a id="more"></a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">float</span> Realpart; <span class="comment">//实数部分</span></span><br><span class="line">	<span class="keyword">float</span> Imagepart;<span class="comment">//虚数部分</span></span><br><span class="line">&#125;Complex;</span><br><span class="line"><span class="function">Complex <span class="title">create</span><span class="params">(<span class="keyword">float</span> x,<span class="keyword">float</span> y)</span></span>;</span><br><span class="line"><span class="function">Complex <span class="title">Add</span><span class="params">(Complex C1,Complex C2)</span></span>;</span><br><span class="line"><span class="function">Complex <span class="title">Sub</span><span class="params">(Complex C1,Complex C2)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function">Complex <span class="title">create</span><span class="params">(<span class="keyword">float</span> x,<span class="keyword">float</span> y)</span><span class="comment">//构造一个复数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Complex C;</span><br><span class="line">    C.Realpart=x;</span><br><span class="line">    C.Imagepart=y;</span><br><span class="line">	<span class="keyword">return</span> C;</span><br><span class="line">&#125;    </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">GetReal</span><span class="params">(Complex C)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> C.Realpart;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">GetImage</span><span class="params">(Complex C)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> C.Imagepart;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Complex <span class="title">Add</span><span class="params">(Complex C1,Complex C2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Complex sum;</span><br><span class="line">	sum.Realpart=C1.Realpart+C2.Realpart;</span><br><span class="line">	sum.Imagepart=C1.Imagepart+C2.Imagepart;</span><br><span class="line">	<span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Complex <span class="title">Sub</span><span class="params">(Complex C1,Complex C2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Complex difference;</span><br><span class="line">	difference.Realpart=C1.Realpart-C2.Realpart;</span><br><span class="line">	difference.Imagepart=C1.Imagepart-C2.Imagepart;</span><br><span class="line">	<span class="keyword">return</span> difference;</span><br><span class="line">&#125; </span><br><span class="line"> main()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">float</span> a,b;</span><br><span class="line">    Complex z1,z2,z3,z4;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入Z1的实部和虚部:\n"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f %f"</span>,&amp;a,&amp;b);</span><br><span class="line">    z1=create(a,b);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入Z2的实部和虚部:\n"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%f %f"</span>,&amp;a,&amp;b);</span><br><span class="line">    z2=create(a,b);</span><br><span class="line">    z3=Add(z1,z2);</span><br><span class="line">	z4=Sub(z1,z2);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"z1.Realpart=%f,z1.Imagepart=%f\n"</span>,z1.Realpart,z1.Imagepart);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"z2.Realpart=%f,z2.Imagepart=%f\n"</span>,z2.Realpart,z2.Imagepart);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"z3.Realpart=%f,z3.Imagepart=%f\n"</span>,z3.Realpart,z3.Imagepart);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"z4.Realpart=%f,z4.Imagepart=%f\n"</span>,z4.Realpart,z4.Imagepart);</span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2018/08/27/web应用安全学习笔记/" rel="next" title="web应用安全学习笔记（一）">
+    下一篇：web应用安全学习笔记（一）
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
